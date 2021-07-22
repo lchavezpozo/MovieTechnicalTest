@@ -12,6 +12,7 @@ struct PaginationViewModel<ViewModel> {
     private let page: Int
     private let totalPage: Int
     private let totalResult: Int
+
     var result: [ViewModel]
 
     var hasMorePages: Bool {
@@ -20,5 +21,12 @@ struct PaginationViewModel<ViewModel> {
 
     var nextPage: Int {
         return page + 1
+    }
+
+    init(page: Int, totalPage: Int, totalResult: Int, result: [ViewModel]) {
+        self.page = page
+        self.totalPage = totalPage
+        self.totalResult = totalResult
+        self.result = result
     }
 }
