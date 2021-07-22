@@ -20,8 +20,7 @@ class Flow {
     func start() {
         let moviewFlow = MovieFlow(networkingService: networkingService)
         let movieCategoryListFeature =  moviewFlow.showMovieCategoryListView()
-        let navigationController = UINavigationController(rootViewController: movieCategoryListFeature)
-        window?.rootViewController = navigationController
+        window?.rootViewController = movieCategoryListFeature
         window?.makeKeyAndVisible()
     }
 }
